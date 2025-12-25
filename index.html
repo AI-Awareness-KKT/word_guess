@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Guess the Word</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="./style.css" />
+</head>
+<body>
+
+  <!-- TOP LOGO HEADER -->
+  <header class="top-header">
+    <img src="./assets/logo.jpg" alt="AI Awareness Project Logo" />
+  </header>
+
+  <!-- BACKGROUND + CENTERED GAME -->
+  <main class="page-wrapper">
+    <div class="game-container">
+      <h1>🎯 Guess the Word</h1>
+      <p class="subtitle">
+        Guess the hidden word using hints and similarity score
+      </p>
+
+      <div class="section">
+        <label for="category">Select Category</label>
+        <select id="category">
+          <option value="">-- Choose --</option>
+          <option value="animals">Animals</option>
+          <option value="fruits">Fruits</option>
+          <option value="sports">Sports</option>
+        </select>
+        <button onclick="startGame()">Start Game</button>
+      </div>
+
+      <div id="gameArea" class="hidden">
+        <p id="hint"></p>
+
+        <input
+          type="text"
+          id="guessInput"
+          placeholder="Type your guess..."
+          autocomplete="off"
+        />
+
+        <button onclick="checkGuess()">Check</button>
+
+        <p id="result"></p>
+        <p id="similarity"></p>
+        <p id="attempts"></p>
+
+        <button
+          id="playAgainBtn"
+          class="hidden"
+          onclick="playAgain()"
+        >
+          🔄 Play Again
+        </button>
+      </div>
+    </div>
+  </main>
+
+  <!-- JS -->
+  <script src="./script.js"></script>
+</body>
+</html>

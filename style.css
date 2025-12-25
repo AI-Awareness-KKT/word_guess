@@ -1,0 +1,153 @@
+/* ========== RESET ========== */
+* {
+  box-sizing: border-box;
+}
+
+/* ========== BODY ========== */
+body {
+  margin: 0;
+  font-family: "Segoe UI", sans-serif;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  background: #000; /* fallback */
+}
+
+/* ========== TOP HEADER ========== */
+.top-header {
+  width: 100%;
+  background: #ffffff;
+  padding: 12px 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 10;
+}
+
+.top-header img {
+  width: 100%;
+  max-width: 1100px;
+  height: auto;
+  object-fit: contain;
+}
+
+/* ========== BACKGROUND AREA ========== */
+.page-wrapper {
+  flex: 1;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  background: url("./assets/background.png") center center / cover no-repeat;
+
+  padding: 40px 20px;
+}
+
+/* DARK OVERLAY FOR READABILITY */
+.page-wrapper::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.25);
+}
+
+/* ========== GAME CARD ========== */
+.game-container {
+  position: relative;
+  z-index: 1;
+  background: rgba(255, 255, 255, 0.95);
+  width: 360px;
+  max-width: 100%;
+  padding: 30px 25px;
+  border-radius: 16px;
+  box-shadow: 0 18px 40px rgba(0, 0, 0, 0.35);
+  text-align: center;
+}
+
+/* ========== TEXT ========== */
+h1 {
+  margin: 0 0 6px 0;
+}
+
+.subtitle {
+  font-size: 14px;
+  color: #555;
+}
+
+/* ========== FORM ========== */
+.section {
+  margin-top: 20px;
+}
+
+label {
+  display: block;
+  font-weight: 600;
+  margin-bottom: 6px;
+}
+
+select,
+input {
+  width: 100%;
+  padding: 11px;
+  margin-top: 8px;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+  font-size: 14px;
+}
+
+input:focus,
+select:focus {
+  outline: none;
+  border-color: #4facfe;
+}
+
+/* ========== BUTTONS ========== */
+button {
+  margin-top: 14px;
+  width: 100%;
+  padding: 11px;
+  background: #4facfe;
+  color: #ffffff;
+  font-size: 15px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+button:hover {
+  background: #3a8fd8;
+}
+
+/* ========== GAME OUTPUT ========== */
+#hint {
+  margin-top: 10px;
+  font-weight: 600;
+}
+
+#result {
+  font-weight: bold;
+  margin-top: 12px;
+}
+
+#similarity {
+  color: #444;
+  margin-top: 4px;
+}
+
+#attempts {
+  font-size: 13px;
+  color: #777;
+}
+
+/* ========== UTIL ========== */
+.hidden {
+  display: none;
+}
+
+/* ========== MOBILE ========== */
+@media (max-width: 600px) {
+  .game-container {
+    padding: 25px 20px;
+  }
+}

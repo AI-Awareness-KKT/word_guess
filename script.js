@@ -109,12 +109,21 @@ function updateAttempts() {
     "Attempts left: " + attemptsLeft;
 }
 
-function similarityScore(a, b) {
-  let matches = 0;
-  const len = Math.max(a.length, b.length);
+function similarityScore(guess, target) {
+  guess = guess.toLowerCase();
+  target = target.toLowerCase();
 
-  for (let i = 0; i < Math.min(a.length, b.length); i++) {
-    if (a[i] === b[i]) matches++;
+  let matches = 0;
+  let targetArr = target.split("");
+
+  for (let char of guess) {
+    let index = targetArr.indexOf(char);
+    if (index !== -1) {
+      matches++;
+      targetArr.splice(index, 1); // remove matched char
+    }
   }
-  return matches / len;
+
+  return matches / Math.max(target.length, guess.length);
 }
+

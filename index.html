@@ -24,15 +24,24 @@
       </p>
 
       <div class="section">
-        <label for="category">Select Category</label>
-        <select id="category">
-          <option value="">-- Choose --</option>
-          <option value="animals">Animals</option>
-          <option value="fruits">Fruits</option>
-          <option value="sports">Sports</option>
-        </select>
-        <button onclick="startGame()">Start Game</button>
-      </div>
+  <label for="category">Select Category</label>
+  <select id="category" required>
+    <option value="">-- Choose --</option>
+    <option value="animal">Animal</option>
+    <option value="bird">Bird</option>
+    <option value="vehicle">Vehicle</option>
+    <option value="fruit">Fruit</option>
+    <option value="vegetable">Vegetable</option>
+    <option value="clothes">Clothes</option>
+    <option value="weather">Weather</option>
+    <option value="jobs">Jobs</option>
+    <option value="sports">Sports</option>
+    <option value="insects">Insects</option>
+  </select>
+
+  <button onclick="startGame()">Start Game</button>
+</div>
+
 
       <div id="gameArea" class="hidden">
         <p id="hint"></p>
@@ -47,6 +56,10 @@
         <button onclick="checkGuess()">Check</button>
 
         <p id="result"></p>
+        <div id="imageBox" class="hidden">
+  <img id="wordImage" alt="Correct word image" />
+</div>
+
         <p id="similarity"></p>
         <p id="attempts"></p>
 

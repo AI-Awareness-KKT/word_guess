@@ -151,3 +151,18 @@ button:hover {
     padding: 25px 20px;
   }
 }
+
+#imageBox {
+  margin-top: 15px;
+  text-align: center;
+}
+
+#wordImage {
+  width: 120px;
+  height: 120px;
+  object-fit: contain;
+  border-radius: 10px;
+  border: 2px solid #4facfe;
+  background: #ffffff;
+}
+
